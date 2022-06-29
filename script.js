@@ -5,7 +5,7 @@ let form = document.getElementById('form');
 let setStatus = document.getElementById('setStatus');
 let errorElement = document.getElementById('errorMsg');
 let description = document.getElementById('description');
-
+let dueDate = document.getElementById('dueDate');
 
 form.addEventListener('submit', (e) => {
     let messages = []
@@ -35,7 +35,16 @@ form.addEventListener('submit', (e) => {
     
 })
 
-
+// Limit task due date to future dates only.
+dueDate.addEventListener("click", function () {
+    let today = new Date();
+    let dateToday = String(today.getDate()).padStart(2, "0");
+    let monthToday = String(today.getMonth() + 1).padStart(2, "0");
+    let yearToday = today.getFullYear();
+    let minDate = `${yearToday}-${monthToday}-${dateToday}`;
+    dueDate.min = minDate;
+  });
+  
 
 
 // modal JS
