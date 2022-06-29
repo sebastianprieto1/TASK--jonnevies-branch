@@ -1,0 +1,46 @@
+
+input {
+    width: 98%;
+}
+
+select {
+    width: 100%;
+}
+
+textarea{
+    width: 98%;
+}
+button {
+    float: right;
+}
+
+
+.modal {
+    display: none; 
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 50%;
+    top: 30%;
+    margin-left: -150px;
+    margin-top: -150px;
+    width: 300px; /* Full width */
+    height: 300px; /* Full height */
+    background-color: white; /* Fallback color */
+    
+
+  }
+
+  /* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
