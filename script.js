@@ -28,6 +28,9 @@ form.addEventListener('submit', (e) => {
     if (description.value.length < 20){
         messages.push('Please write a description of at least 20 characters!')
     }
+    if (dueDate.value === ""){
+        messages.push('Please set a due date!')
+    }
     if (messages.length > 0){
         e.preventDefault()
         errorElement.innerText = messages.join(',')
